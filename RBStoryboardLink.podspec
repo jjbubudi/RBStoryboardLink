@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   }
   s.author       = 'Robert Brown'
   s.source       = {
-      :git => 'https://github.com/rob-brown/RBStoryboardLink.git',
+      :git => 'https://github.com/jjbubudi/RBStoryboardLink.git',
       :tag => s.version
   }
   s.platform     = :ios, '7.0'
@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Classes/*.h'
   s.frameworks = 'UIKit'
   s.requires_arc = true
+  s.dependency 'Typhoon'
 end

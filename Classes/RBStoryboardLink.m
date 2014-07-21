@@ -24,6 +24,7 @@
 
 #import "RBStoryboardLink.h"
 #import "RBStoryboardLinkSource.h"
+#import "TyphoonStoryboard.h"
 
 
 @interface RBStoryboardLink ()
@@ -82,7 +83,10 @@
 
     NSAssert([self.storyboardName length], @"No storyboard name");
 
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:self.storyboardName bundle:nil];
+    UIStoryboard * storyboard
+        = [TyphoonStoryboard storyboardWithName:self.storyboardName
+                                        factory:[TyphoonComponentFactory defaultFactory]
+                                         bundle:nil];
     UIViewController * scene = nil;
 
     // Creates the linked scene.
